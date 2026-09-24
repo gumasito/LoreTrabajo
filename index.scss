@@ -1,0 +1,48 @@
+// Variables
+$color-principal: #3498db;
+$color-fondo: #f2f2f2;
+$color-texto: #333;
+$fuente: Arial, sans-serif;
+
+
+// Mixin
+@mixin boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+// Estilos
+body {
+    background-color: $color-fondo;
+    font-family: $fuente;
+    color: $color-texto;
+}
+
+
+// Anidamiento
+.contenedor {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+
+    h1 {
+        color: $color-principal;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        @include boton;
+        background-color: $color-principal;
+        color: white;
+
+        &:hover {
+            background-color: #217dbb;
+        }
+    }
+}
